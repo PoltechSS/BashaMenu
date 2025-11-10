@@ -1,0 +1,56 @@
+<div class="container-fluid menu-section">
+  <h2 class="text-center mb-4">    <li class="nav-item text-center">
+     <img src="assets/img/headerlogo.png" width="95" height="85" alt="Basha Bhai Biryani" data-retina="true">
+    </li>Basha Bhai Biryani Menu</h2>
+  <img src="assets/img/menuicon2.png" alt="Category" class="category-start-icon mb-1">
+
+<div class="category-scroll-wrapper" #scrollContainer>
+  <ul class="nav nav-pills mb-4 flex-nowrap overflow-auto align-items-center m-0 p-0">
+
+    <li class="nav-item text-center" *ngFor="let category of categories">
+      <a 
+        class="nav-link d-flex flex-column align-items-center justify-content-center px-3 py-2"
+        [class.active]="category === selectedCategory" 
+        (click)="selectCategory(category)">
+        
+        <!-- Show image if available -->
+        <img *ngIf="categoryImages[category]" 
+             [src]="categoryImages[category]" 
+             alt="{{ category }}" 
+             class="category-icon mb-1" 
+             style="width: 40px; height: 40px;">
+
+        <!-- Otherwise, show icon -->
+        <i *ngIf="!categoryImages[category]" 
+           class="bi {{ categoryIcons[category] }} mb-1 fs-4"></i>
+
+        <span>{{ category }}</span>
+      </a>
+    </li>
+
+  </ul>
+</div>
+
+
+<div class="row g-4" [@listAnimation]="getItemsBySelectedCategory().length">
+  <div 
+    class="col-sm-6 col-md-4 col-lg-3" 
+    *ngFor="let item of getItemsBySelectedCategory()">
+    
+    <div class="card text-center custom_card h-100">
+      <img 
+        class="card-img-top"
+        [src]="item.image"
+        [alt]="item.name"
+        style="width: 100%; height: 200px; object-fit: contain; background-color: #f8f8f8;">
+      <div class="card-body">
+        <p class="card-title fw-bold">{{item.name}}</p>
+        <p class="card-text">{{item.types}}</p>
+        <a href="#" class="btn btn-outline-primary">{{item.price}} AED</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+

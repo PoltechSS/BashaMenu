@@ -1,0 +1,118 @@
+.menu-section {
+  font-family: cursive;/* change to your desired font */
+   background: url('/assets/img/background1.jpg') no-repeat center center/cover; 
+}
+
+
+.category-scroll-wrapper {
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch; /* smooth on mobile */
+  scroll-behavior: smooth;
+  cursor: grab;
+  user-select: none;
+  padding: 0.5rem;
+}
+
+/* Hide scrollbar for all browsers */
+.category-scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.category-scroll-wrapper {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.category-scroll-wrapper:active {
+  cursor: grabbing;
+}
+
+/* Category styling */
+.nav-pills .nav-link {
+  flex: 0 0 auto;
+  border-radius: 1rem;
+  font-weight: 600;
+  color: #444;
+  transition: 0.3s;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #ff6f00;
+  color: #fff;
+}
+
+.nav-pills .nav-link:hover {
+  background-color: #ffe0b2;
+}
+
+.category-icon {
+  object-fit: contain;
+}
+
+
+.category-start-icon {
+  width: 70px;   /* adjust as needed */
+  height: 50px;
+  object-fit: contain;
+  flex: 0 0 auto;  /* ensures it doesn't shrink */
+  margin-right: 0.5rem;
+}
+
+
+
+.card img {
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  color: #b23c17;
+  margin-bottom: 0.3rem;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+  min-height: 45px;
+}
+.custom_card {
+  border: none;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: all 0.35s ease;
+  backdrop-filter: blur(5px);
+}
+
+.custom_card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(255, 111, 0, 0.4);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: contain;
+  background-color: #fff7f0;
+  border-bottom: 2px solid #ffcc80;
+  transition: transform 0.4s ease;
+}
+
+.custom_card:hover .card-img-top {
+  transform: scale(1.05);
+}
+/* Price button */
+.btn-outline-primary {
+  border-radius: 20px;
+  border: 2px solid #ff6f00;
+  color: #ff6f00;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: #ff6f00;
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(255, 111, 0, 0.5);
+}
